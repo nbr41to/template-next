@@ -1,6 +1,6 @@
 # Next.js Template
 
-```
+```sh
 yarn create next-app [PJ_NAME] -e "https://github.com/nbr41to/template-next"
 ```
 
@@ -8,6 +8,8 @@ yarn create next-app [PJ_NAME] -e "https://github.com/nbr41to/template-next"
 
 - typescirpt
 - styled-components
-- recoil
+- storybook
 - eslint
 - prettier
+- jest
+- sort-package-json
