@@ -17,6 +17,14 @@ export const theme = {
         justify-content: center;
         align-items: center;
       `,
+    box: (): FlattenSimpleInterpolation =>
+      css`
+        margin: 12px;
+        padding: 16px 20px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #444;
+      `,
   },
   media: {
     sp: (
