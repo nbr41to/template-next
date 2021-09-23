@@ -4,3 +4,5 @@ package.json
 .prettierrc.js
 next.config.js
 .next
+out/
+.storybook/
