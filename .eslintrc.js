@@ -18,18 +18,17 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['react', '@typescript-eslint'],
-  extends: ['next', 'eslint:recommended', 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:@next/next/recommended', 'prettier'],
+  extends: ['next', "next/core-web-vitals", 'prettier'],
   rules: {
-    '@next/next/no-page-custom-font': 'off',
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-empty-function': 0,
-    'react/prop-types': 0,
-    'react/react-in-jsx-scope': 0,
-    'no-empty-function': 0,
-    '@typescript-eslint/ban-ts-comment': 0,
-    'no-console': 'warn',
     quotes: ['error', 'single'],
+    'no-console': 'warn',
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
   },
 };
