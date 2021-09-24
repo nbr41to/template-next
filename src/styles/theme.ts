@@ -14,16 +14,16 @@ export const theme = {
     toCenter: (): FlattenSimpleInterpolation =>
       css`
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
       `,
     box: (): FlattenSimpleInterpolation =>
       css`
-        margin: 12px;
         padding: 16px 20px;
-        border-radius: 4px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin: 12px;
         border: 1px solid #444;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       `,
   },
   media: {

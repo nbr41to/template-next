@@ -22,6 +22,8 @@ export const Button: VFC<ButtonProps> = ({
 };
 
 const StyledButton = styled.button<{ contain: boolean }>`
+  position: relative;
+  overflow: hidden;
   font: normal normal normal 16px/1.5em 'Roboto', sans-serif;
   letter-spacing: 4px;
   cursor: pointer;
@@ -29,17 +31,13 @@ const StyledButton = styled.button<{ contain: boolean }>`
   ${({ theme }) => theme.mixins.box};
   ${({ theme }) => theme.mixins.toCenter};
 
-  position: relative;
-  overflow: hidden;
-  &:before {
-    content: '';
-    width: 4px;
-    height: 4px;
-
+  &::before {
     position: absolute;
     inset: 0;
+    width: 4px;
+    height: 4px;
     margin: auto;
-
+    content: '';
     border-radius: 50%;
     @keyframes spared {
       0% {
@@ -58,7 +56,7 @@ const StyledButton = styled.button<{ contain: boolean }>`
     }
   }
   &:active {
-    &:before {
+    &::before {
       width: 120px;
       height: 120px;
       background-color: #0006;
@@ -69,21 +67,21 @@ const StyledButton = styled.button<{ contain: boolean }>`
   ${({ contain }) =>
     contain
       ? css`
-          background: #343434 0% 0% no-repeat padding-box;
           color: #fff;
+          background: #343434 0% 0% no-repeat padding-box;
           &:hover {
-            background: #fff 0% 0% no-repeat padding-box;
             color: #343434;
+            background: #fff 0% 0% no-repeat padding-box;
             border: 1px solid #343434;
             transition: 0.3s;
           }
         `
       : css`
-          border: 1px solid #343434;
           color: #343434;
+          border: 1px solid #343434;
           &:hover {
-            background: #343434 0% 0% no-repeat padding-box;
             color: #fff;
+            background: #343434 0% 0% no-repeat padding-box;
             transition: 0.3s;
           }
         `};
