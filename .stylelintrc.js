@@ -11,6 +11,6 @@ module.exports = {
     'prettier/prettier': true,
     'block-no-empty': null,
     'property-no-unknown': true,
-    'no-duplicate-selectors': null,
+    'no-duplicate-selectors': null, // scの分岐で重複するため
   },
 };
