@@ -1,10 +1,5 @@
 node_modules/
 public/
 package.json
-.eslintrc.js
-.prettierrc.js
-.stylelintrc.js
-next.config.js
 .next
 out/
-.storybook/

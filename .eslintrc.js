@@ -18,17 +18,20 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ['next', "next/core-web-vitals", 'prettier'],
+  plugins: ['simple-import-sort', '@typescript-eslint'],
+  extends: [
+    'next',
+    'next/core-web-vitals',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
+  ],
   rules: {
     quotes: ['error', 'single'],
     'no-console': 'warn',
-    "import/order": [
-      "error",
-      {
-        "alphabetize": {
-          "order": "asc"
-        }
-      }
-    ],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
 };
