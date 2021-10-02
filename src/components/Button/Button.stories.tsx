@@ -8,11 +8,16 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-export const ButtonComponent: ComponentStory<typeof Button> = (args) => (
-  <Button {...args} />
-);
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-ButtonComponent.args = {
+export const Default = Template.bind({});
+Default.args = {
+  contain: false,
+  label: 'Button',
+};
+export const Contain = Template.bind({});
+
+Contain.args = {
   contain: true,
   label: 'Button',
 };

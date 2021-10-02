@@ -1,9 +1,11 @@
+import { NextPage } from 'next';
+
 import { Button } from '@/components/Button';
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
     <div>
-      <h1>Hello Next.js Template by nbr41to</h1>
+      <h1>Home</h1>
       <Button label="button" />
     </div>
   );

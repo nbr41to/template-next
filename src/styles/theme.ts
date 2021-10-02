@@ -9,8 +9,31 @@ import {
 
 export const theme = {
   name: 'Base Theme',
-  fonts: {},
-  colors: {},
+  fonts: {
+    small: (): FlattenSimpleInterpolation =>
+      css`
+        font-size: 12px;
+      `,
+    medium: (): FlattenSimpleInterpolation =>
+      css`
+        font-size: 16px;
+      `,
+    large: (): FlattenSimpleInterpolation =>
+      css`
+        font-size: 20px;
+      `,
+    xlarge: (): FlattenSimpleInterpolation =>
+      css`
+        font-size: 24px;
+      `,
+    xxlarge: (): FlattenSimpleInterpolation =>
+      css`
+        font-size: 32px;
+      `,
+  },
+  colors: {
+    main: 'aquamarine',
+  },
   mixins: {
     toCenter: (): FlattenSimpleInterpolation =>
       css`

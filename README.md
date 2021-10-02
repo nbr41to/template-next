@@ -1,5 +1,9 @@
 # Next.js Template
 
+開発用のもりもりテンプレート
+
+ご自由にお使いください。
+
 ```sh
 yarn create next-app [PJ_NAME] -e "https://github.com/nbr41to/template-next"
 ```

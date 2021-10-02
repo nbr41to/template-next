@@ -5,10 +5,14 @@ import type { AppProps /*, AppContext */ } from 'next/app';
 import { theme } from 'src/styles/theme';
 import { ThemeProvider } from 'styled-components';
 
+import { Layout } from '@/components/Layout';
+
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 };

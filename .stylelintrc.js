@@ -8,9 +8,8 @@ module.exports = {
   ],
   ignoreFiles: ['node_modules/**', '**.json', '**.md', '**.ico'],
   rules: {
-    'prettier/prettier': true,
     'block-no-empty': null,
-    'property-no-unknown': true,
+    'no-empty-source': null,
     'no-duplicate-selectors': null, // styled-componentsの分岐で重複することがあるため
   },
 };
