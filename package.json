@@ -11,13 +11,11 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "spj": "sort-package-json package.json && prettier \"**/*\" --write --ignore-unknown"
+    "fmt": "sort-package-json package.json && npx eslint --fix . && npx prettier --write . && npx stylelint --fix ."
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "npx eslint --fix .",
-      "npx prettier --write .",
-      "npx stylelint --fix ."
+      "yarn fmt"
     ]
   },
   "dependencies": {
